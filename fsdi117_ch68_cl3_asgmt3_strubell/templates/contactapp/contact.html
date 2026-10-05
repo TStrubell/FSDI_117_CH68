@@ -1,0 +1,63 @@
+<!-- contactapp/templates/contactapp/contact.html  (ASSIGNMENT 3) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SGnG Contact · Assignment 3</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="site-wrapper">
+    <header class="navbar">
+        <div class="navbar-brand">
+            Strubell <span>Goods & Gear</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Assignment 3 Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Contact · Assignment 3</h2>
+            <p>
+                This form implements the requirements for Assignment 3: name, email, subject, and
+                message, sending an email via Django’s email module.
+            </p>
+
+            <div class="form-wrapper">
+                {% if sent %}
+                    <p><strong>Your message has been sent successfully.</strong></p>
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Your Name</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">Your Email</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_subject">Subject</label>
+                        {{ form.subject }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_message">Message</label>
+                        {{ form.message }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>Assignment 3 · SGnG Contact Form</div>
+    </footer>
+</div>
+</body>
+</html>

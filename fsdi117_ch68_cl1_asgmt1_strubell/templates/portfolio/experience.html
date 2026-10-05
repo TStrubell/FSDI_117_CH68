@@ -1,0 +1,31 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block content %}
+<section class="section">
+    <h2>{% trans "Experience" %}</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h3>{% trans "Military & Special Operations" %}</h3>
+            <p>
+                {% trans "Over two decades of service in the Army and Special Operations shaped my ability to lead, adapt, and deliver under pressure. Mission planning, risk assessment, and disciplined execution are now core to how I approach software projects." %}
+            </p>
+        </div>
+        <div class="card">
+            <h3>{% trans "Full Stack Development Immersive · SDGKU" %}</h3>
+            <p>
+                {% trans "Currently completing FSDI courses, including portfolio development with Django, Agile architecture, and project management. I focus on building portfolios that are not just visually appealing, but structurally sound and easy to maintain." %}
+            </p>
+        </div>
+        <div class="card">
+            <h3>{% trans "Strubell Publishing LLC · SGnG" %}</h3>
+            <p>
+                {% trans "From shed construction plans in Word and Excel to SGnG-branded web experiences, I design artifacts that are ready for real-world use—clear, documented, and aligned with professional standards." %}
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

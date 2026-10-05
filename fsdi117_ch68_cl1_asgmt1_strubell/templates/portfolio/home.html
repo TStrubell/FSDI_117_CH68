@@ -1,0 +1,43 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-left">
+        <h1 class="hero-title" style="color:#66fcf1;">{% trans "Tim Strubell" %}</h1>
+        <p class="hero-subtitle" style="color:#c5c6c7;">
+            {% trans "Developer · Veteran · Builder of Better Systems" %}
+        </p>
+        <p class="hero-tagline">
+            {% trans "Strubell Goods & Gear (SGnG), a DBA of Strubell Publishing LLC, is my way of turning discipline, craftsmanship, and code into tangible impact—from leather aesthetics to full-stack solutions." %}
+        </p>
+        <a href="{% url 'projects' %}" class="btn btn-primary" style="margin-top:1.5rem;">
+            {% trans "View Portfolio" %}
+        </a>
+    </div>
+    <div class="hero-right">
+        <div class="hero-card">
+            <h3>{% trans "What Drives Me" %}</h3>
+            <p><strong>{% trans "Military Precision:" %}</strong>
+                {% trans "23 years in Army and Special Operations forged my attention to detail, resilience, and mission-first mindset." %}
+            </p>
+            <p><strong>{% trans "Technical Growth:" %}</strong>
+                {% trans "Currently in the Full Stack Development Immersive at SDGKU, building modern, responsive web experiences." %}
+            </p>
+            <p><strong>{% trans "SGnG Brand:" %}</strong>
+                {% trans "High-quality leather aesthetics, unified systems, and professional documentation—everything built to be clear, durable, and dependable." %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>{% trans "Strubell Goods & Gear · Strubell Publishing LLC" %}</h2>
+    <p>
+        {% trans "SGnG is the product arm of Strubell Publishing LLC, blending physical craftsmanship with digital architecture. Whether it's a shed plan in Word and Excel or a Django-powered portfolio, the goal is the same: build systems that are understandable, maintainable, and ready for real-world use." %}
+    </p>
+</section>
+{% endblock %}

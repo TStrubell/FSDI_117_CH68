@@ -1,0 +1,63 @@
+# ============================
+# Python / Django Ignore Rules
+# ============================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Django local files
+db.sqlite3
+*.log
+
+# ============================
+# Jupyter / Notebook
+# ============================
+
+.ipynb_checkpoints/
+
+# ============================
+# VS Code Ignore Rules
+# ============================
+
+.vscode/
+.history/
+
+# ============================
+# OS / System Files
+# ============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# ============================
+# Static / Media (Generated)
+# ============================
+
+media/
+staticfiles/
+
+# ============================
+# Optional Data Files
+# ============================
+
+# Ignore JSON test data unless needed
+data/*.json
+
+# ============================
+# Environment Variables
+# ============================
+
+.env
+*.env

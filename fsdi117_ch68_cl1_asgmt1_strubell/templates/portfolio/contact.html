@@ -1,0 +1,118 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block title %}{% trans "Contact | Strubell Goods & Gear · Strubell Publishing LLC" %}{% endblock %}
+
+{% block content %}
+<div class="container sgng-contact mt-4 mb-5">
+    <h1 class="mb-4">{% trans "Contact Strubell Goods & Gear" %}</h1>
+    <p class="lead">
+        {% trans "Reach out to Strubell Goods & Gear for any inquiries on projects, collaborations, or mission-focused engagements." %}
+    </p>
+    
+    {% if success %}
+    <div class="alert alert-success">
+        {{ success_message }}
+    </div>
+    {% endif %}
+    {% if success %}
+        <div class="alert alert-success">
+            {% trans "Your message has been sent successfully. Please check your Gmail inbox to confirm delivery. I'll review it and respond as soon as possible." %}
+        </div>
+    {% endif %}
+
+    <form method="post" novalidate class="sgng-contact-form">
+        {% csrf_token %}
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">{% trans "First Name (Required)" %}</label>
+                {{ form.first_name }}
+            </div>
+            <div class="col">
+                <label class="form-label">{% trans "Last Name (Required)" %}</label>
+                {{ form.last_name }}
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">{% trans "Email (Required)" %}</label>
+                {{ form.email }}
+            </div>
+            <div class="col">
+                <label class="form-label">{% trans "Confirm Email (Required)" %}</label>
+                {{ form.confirm_email }}
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{% trans "Subject" %}</label>
+            {{ form.subject }}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">{% trans "Comments (Required)" %}</label>
+            {{ form.message }}
+            <small class="text-muted" id="sgng-char-count">
+                {{ form.message.value|length|default:0 }} {% trans "of 600 max characters" %}
+            </small>
+        </div>
+
+        <div class="sgng-progress-wrapper">
+            <div id="sgng-progress-bar"></div>
+        </div>
+
+        <small id="sgng-char-remaining" class="text-muted">
+            {% trans "600 characters remaining" %}
+        </small>
+
+        <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+        <button type="reset" class="btn btn-secondary">{% trans "Reset" %}</button>
+    </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const messageBox = document.getElementById("sgng-message-box");
+    messageBox.setAttribute("maxlength", "600");
+
+    const remaining = document.getElementById("sgng-char-remaining");
+    const progressBar = document.getElementById("sgng-progress-bar");
+    const submitBtn = document.querySelector("button[type='submit']");
+    const maxChars = 600;
+
+    messageBox.addEventListener("input", function () {
+        const length = messageBox.value.length;
+        const remainingChars = maxChars - length;
+
+        remaining.textContent = `${remainingChars} {% trans "characters remaining" %}`;
+        const percent = (length / maxChars) * 100;
+        progressBar.style.width = percent + "%";
+
+        if (remainingChars === 0) {
+            messageBox.classList.add("sgng-shake");
+            submitBtn.disabled = true;
+        } else {
+            messageBox.classList.remove("sgng-shake");
+            submitBtn.disabled = false;
+        }
+    });
+
+    function sgngMarkError(field) {
+        field.classList.add("sgng-error");
+        setTimeout(() => field.classList.remove("sgng-error"), 600);
+    }
+
+    submitBtn.addEventListener("click", function (event) {
+        if (messageBox.value.length === 0) {
+            event.preventDefault();
+            sgngMarkError(messageBox);
+        }
+    });
+});
+</script>
+{% endblock %}

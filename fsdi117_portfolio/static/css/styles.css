@@ -1,0 +1,327 @@
+/* Global */
+body {
+    background-color: #f8f9fa;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.sgng-main {
+    min-height: 70vh;
+    padding-bottom: 40px;
+}
+
+/* Navbar & Logo */
+.sgng-navbar {
+    border-bottom: 2px solid #343a40;
+}
+
+.sgng-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Hero */
+.hero-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-visual {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-text {
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.hero-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0d6efd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-cta-group .btn {
+    margin-top: 1rem;
+}
+
+/* Sections */
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.section-intro {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Team */
+.team-card .card-title {
+    font-weight: 600;
+}
+
+.team-card .card-subtitle {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Partners */
+.partner-grid {
+    margin-top: 1rem;
+}
+
+.partner-item {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+}
+
+/* Media */
+.media-card {
+    border-radius: 0.5rem;
+    border: 1px dashed #ced4da;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.media-placeholder {
+    text-align: center;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* Testimonials */
+.testimonial-card {
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Experience */
+.subheading {
+    font-weight: 600;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li::before {
+    content: "• ";
+    color: #0d6efd;
+}
+
+/* Contact */
+.contact-form .form-label {
+    font-weight: 500;
+}
+
+/* Footer */
+.sgng-footer {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* GLOBAL */
+body {
+    background-color: #f5f5f7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #222;
+}
+
+.sgng-main {
+    min-height: 70vh;
+}
+
+/* NAVBAR */
+.sgng-navbar {
+    border-bottom: 2px solid #1f2933;
+}
+
+.sgng-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 8px;
+}
+
+/* HERO PARALLAX */
+.hero-parallax {
+    position: relative;
+    min-height: 70vh;
+    background-image: url("/static/img/clock_background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.6)
+    );
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #f9fafb;
+}
+
+.hero-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3b82f6;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+.hero-cta-group .btn {
+    margin-top: 1rem;
+}
+
+/* SECTIONS */
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.section-intro {
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+}
+
+/* EXPERIENCE LISTS */
+.subheading {
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li::before {
+    content: "• ";
+    color: #3b82f6;
+}
+
+/* CONTACT FORM */
+.contact-form .form-label {
+    font-weight: 500;
+}
+
+.contact-form button {
+    min-width: 140px;
+}
+
+/* FOOTER */
+.sgng-footer {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
+
+/* SIMPLE PARALLAX TWEAK VIA JS */
+.parallax-active {
+    background-attachment: scroll;
+}
+
+/* OPTIONAL ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeInUp 0.7s ease-out;
+}

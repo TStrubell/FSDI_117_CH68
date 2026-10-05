@@ -1,0 +1,839 @@
+/* GLOBAL TYPOGRAPHY */
+body {
+    font-family: Cambria, serif;
+    background-color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* LAYOUT */
+
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3, h4 {
+    font-family: Cambria, serif;
+    font-weight: 700;
+    color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #0b1120;
+    color: #f9fafb;
+    gap: 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navbar-brand span {
+    color: #f97316;
+}
+
+/* Base nav styling */
+.navbar-nav .nav-link {
+    font-weight: 700; /* bold */
+    position: relative;
+    color: #ffffff !important;
+    text-shadow:
+        1px 1px 0px #000000,
+        -1px -1px 0px #ffffff;
+}
+
+/* Emboss effect */
+.navbar-nav .nav-link {
+    text-shadow:
+        1px 1px 0px rgba(255,255,255,0.4),
+        -1px -1px 0px rgba(0,0,0,0.4);
+}
+
+/* Active page turns orange */
+.navbar-nav .nav-link.active {
+    color: #ff8c00 !important; /* SGnG orange */
+    text-shadow:
+        1px 1px 0px rgba(255,255,255,0.4),
+        -1px -1px 0px rgba(0,0,0,0.4);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* HERO / SGnG STYLE */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #0b1120 0%, #111827 40%, #f5f5f7 100%);
+    color: #f9fafb;
+}
+
+.hero-left {
+    flex: 1 1 280px;
+    padding: 1rem 2rem 1rem 0;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #cbd5f5;
+}
+
+.hero-tagline {
+    font-size: 0.95rem;
+    max-width: 480px;
+    line-height: 1.6;
+}
+
+.hero-right {
+    flex: 1 1 280px;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.hero-card {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+}
+
+.hero-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.hero-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+/* Sections */
+
+.section {
+    padding: 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0b1120;
+}
+
+.section p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* FORMS */
+
+.form-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.4rem;
+    border: 1px solid #cbd5e1;
+    font-family: Cambria, sans-serif;
+    font-size: 0.95rem;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Gold glow when typing */
+input:focus, textarea:focus {
+    outline: none !important;
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 8px #d4af37;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Gold animated underline for labels */
+.form-label {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.form-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #d4af37, #b8860b);
+    transition: width 0.4s ease-in-out;
+}
+
+.form-label:hover::after {
+    width: 100%;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* SKILLS LIST */
+.skills-list {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-family: Cambria, serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #38bdf8;
+    color: #0b1120;
+}
+
+.btn-primary:hover {
+    background-color: #0ea5e9;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-outline-light {
+    border: 1px solid #e5e7eb;
+    color: #e5e7eb;
+}
+
+.btn-outline-light:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 1.5rem 3rem;
+    background-color: #0b1120;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #38bdf8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FORCE LIGHT TEXT IN HERO SECTION */
+.hero-title,
+.hero-subtitle,
+.hero-tagline,
+.hero-card h3,
+.hero-card p {
+    color: #f9fafb !important;
+}
+
+.hero-title {
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.hero-card {
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #f9fafb !important;
+}
+
+.about-section {
+  padding: 3rem 2rem;
+}
+
+.about-avatar img {
+    width: 180px !important;
+    height: 180px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 3px solid #facc15 !important; /* SGnG yellow accent */
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: left; /* or center, your choice */
+  }
+}
+
+/* ============================
+  SGNG CONTACT + FOOTER STYLING
+  =========================== */
+
+.sgng-contact {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.sgng-contact h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sgng-contact-form input,
+.sgng-contact-form textarea {
+    width: 100%;
+    box-sizing:border-box;
+    border-radius: 0;
+}
+
+.sgng-footer {
+    background-color: #0a1a2b !important;
+    color: #ffffff !important;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.sgng-footer a {
+    color: #d4af37 !important;
+    font-weight: bold !important;
+    text-decoration: none;
+    margin: 0 0.75rem;
+}
+
+.sgng-footer a:hover {
+    color: #ff8c00;
+}
+
+.sgng-footer-nav {
+    margin-top: 0.5rem;
+}
+
+.sgng-footer-nav a {
+    text-decoration: none;
+    margin: 0 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.sgng-contact-logo-container {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sgng-contact-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    opacity: 0.9;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+    margin-top: 1rem;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.sgng-contact-logo:hover {
+    filter: drop-shadow(0px 0px 12px #d4af37);
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.sgng-contact-form {
+    opacity: 0;
+    animation: sgngFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes sgngFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   SGNG WATERMARK BEHIND FORM
+   =========================== */
+.sgng-contact {
+    position: relative;
+}
+
+.sgng-contact::before {
+    content: "";
+    background-image: url('/static/portfolio/img/sgng_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;   /* SCALES TO CONTAINER */
+    opacity: 0.06; /* SUBTLE WATERMARK */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    transform: translate(0, 0);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure form content sits above watermark */
+.sgng-contact-form {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===========================
+   PROGRESS BAR STYLING
+   =========================== */
+.sgng-progress-wrapper {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#sgng-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #d4af37; /* SGnG gold */
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+}
+
+/* ===========================
+   SHAKE ANIMATION
+   =========================== */
+@keyframes sgngShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+.sgng-shake {
+    animation: sgngShake 0.3s;
+}
+
+/* ===========================
+   SUBMIT BUTTON DISABLED STYLE
+   =========================== */
+button:disabled {
+    background-color: #999 !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ===========================
+   VALIDATION ERROR SHAKE
+   =========================== */
+@keyframes sgngErrorShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+.sgng-error {
+    animation: sgngErrorShake 0.3s;
+    border-color: #b0005c !important; /* SGnG PURPLE-RED */
+    box-shadow: 0 0 8px #b0005c;
+}
+
+/* ===========================
+   SGnG Light / Dark Mode
+   =========================== */   
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}    
+
+body.light-mode a {
+    color: #d4af37 !important;
+}
+
+/* Footer in light mode */
+body.light-mode .sgng-footer {
+    background-color: #ffffff;
+    color: #000000;
+}    
+
+body.light-mode .navbar {
+    background-color: #ffffff !important;
+}        
+
+body.light-mode input,
+body.light-mode textarea {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .sgng-contact::before {
+    opacity: 0.06;
+}
+
+body.light-mode input:focus,
+body.light-mode textarea:focus {
+    box-shadow: 0 0 6px #d4af37;
+}
+
+/* Embossed outline for cards in light mode */
+body.light-mode .project-card,
+body.light-mode .skill-card,
+body.light-mode .experience-card {
+    border: 2px solid #0a1a2b;
+    box-shadow:
+    inset 2px 2px 4px rgba(255,255,255,0.6),
+    inset -2px -2px 4px rgba(0,0,0,0.3),
+    3px 3px 6px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+}
+
+/* GOODS & GEAR stays orange */
+body.light-mode .sgng-title span {
+    color: #ff8c00 !important; /* SGnG orange */
+}
+
+body.light-mode .sgng-title {
+    color: #ffffff !important; /* STRUBELL becomes white */
+}
+
+body.light-mode .sgng-title span {
+    color: #ff8c00 !important; /* GOODS & GEAR stays orange */
+}
+
+/* ------------------------------ */
+/* SGnG Light Mode Header & Nav Fix */
+/* ------------------------------ */
+
+body.light-mode .navbar {
+    background-color: #0b1e39;
+    color: white;
+}
+
+body.light-mode .navbar a {
+    color: white;
+}
+
+body.light-mode .navbar a:hover {
+    color: #66fcf1;
+}
+
+body.light-mode .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+body.light-mode .navbar-nav .nav-item {
+    display: inline-block;
+}
+
+/* SGnG Dark Mode */
+body.dark-mode {
+    background-color: #0a1a2b; /* SGnG tactical navy */
+    color: #ffffff;
+}                        
+
+/* Links */
+body.dark-mode a {
+    color: #d4af37 !important;
+}                
+
+body.dark-mode {
+    color: #f0f0f0 !important; /* soft white */
+}
+
+/* Section headers in dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #d4af37 !important; /* SGnG gold */
+}
+
+/* Paragraph text in dark mode */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span {
+    color: #ffffff !important;
+}
+
+/* Card text in dark mode */
+body.dark-mode .card,
+body.dark-mode .experience-card,
+body.dark-mode .project-card {
+    color: #ffffff !important;
+    background-color: #11263d !important; /* SGnG deep navy */
+    border: 1px solid #d4af37 !important;
+}
+
+/* Dark-mode optimized images */
+body.dark-mode img {
+    filter: brightness(1.15) contrast(1.1);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* --------------------------------
+   SGnG DARK MODE HORIZONTAL NAVBAR 
+   -------------------------------- */
+body.dark-mode .navbar {
+    background-color: #0b1e39 !important;
+    border-bottom: 2px solid #d4af37;
+    color: white;
+}
+
+/* Light Mode Header — Force Dark Blue */
+body.light-mode .navbar,
+body.light-mode .navbar.navbar-light,
+body.light-mode .navbar.bg-light {
+    background-color: #0b1e39 !important; /* SGnG dark blue */
+    color: white !important;
+}
+
+body.dark-mode .navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 1.25rem; /* SPACING BETWEEN LINKS */
+}
+
+body.dark-mode .navbar-nav .nav-item {
+    display: inline-block !important;
+}
+
+body.dark-mode .navbar a {
+    color: white;
+}
+
+body.dark-mode .navbar a:hover {
+    color: #66fcf1; /* SGnG TEAL ACCENT */
+}
+
+body.dark-mode .sgng-footer {
+    background-color: #0a1a2b;
+    color: #ffffff;
+}                            
+
+/* --------------------------------
+   DARK MODE FORM FIELDS
+   -------------------------------- */
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #11263d;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+}            
+
+body.dark-mode .sgng-contact::before {
+    opacity: 0.10; /* slightly brighter in dark mode */
+}            
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    box-shadow: 0 0 10px #d4af37;
+}            
+
+/* Toggle button */
+.sgng-theme-btn {
+    background-color: #d4af37;
+    color: #000000;
+    border: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}        
+
+.sgng-theme-btn:hover {
+    background-color: #b8860b;
+    color: #ffffff;
+    box-shadow: 0 0 12px #d4af37;
+    transform: scale(1.05);
+}        
+
+/* Header and footer ALWAYS dark */
+.navbar,
+.sgng-footer {
+    background-color: #0a1a2b !important; /* SGnG tactical navy */
+    color: #ffffff !important;
+    border-bottom: 2px solid #d4af37;
+}    
+
+/* Footer links */
+.sgng-footer a {
+    color: #ffffff !important;
+}    
+
+.sgng-footer a:hover {
+    color: #d4af37 !important;
+}    
+
+/* HEADER + FOOTER ALWAYS NAVY BLUE */
+.navbar,
+.sgng-footer {
+    background-color: #0a1a2b !important; /* SGnG tactical navy */
+    color: #ffffff !important;
+    border-bottom: 2px solid #d4af37;
+}
+
+/* NAVBAR FIX: prevent stacking */
+.navbar-nav {
+    flex-direction: row !important;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+
+/* NAVBAR BRAND (STRUBELL GOODS & GEAR) */
+.sgng-title {
+    color: #ffffff !important;
+}
+

@@ -1,0 +1,27 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block content %}
+<section class="about-section">
+  <div class="about-layout">
+    <div class="about-avatar">
+      <img src="{% static 'img/avatar_tim_strubell.png' %}" alt="{% trans 'Tim Strubell avatar' %}">
+    </div>
+    <div class="about-text">
+        <h2>{% trans "About Me" %}</h2>
+        <p>
+            {% trans "I'm Tim Strubell—husband, father, veteran, and developer. After 23 years in the Army and Special Operations, I transitioned into software development with the same mindset that carried me through complex missions: plan clearly, execute precisely, and always improve." %}
+        </p>
+        <p>
+            {% trans "Today, I'm a Full Stack Development Immersive student at San Diego Global Knowledge University, focused on building clean, responsive web applications. I care deeply about unified technical structure, professional documentation, and systems that make sense to the people who use them." %}
+        </p>
+        <p>
+            {% trans "Strubell Goods & Gear and Strubell Publishing LLC are extensions of that philosophy—where high-quality leather aesthetics, detailed Word/Excel plans, and modern web development come together under one disciplined brand." %}
+        </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block content %}
+<section class="section">
+    <h2>{% trans "Projects" %}</h2>
+    <p class="mb-4">
+        {% trans "Every SGnG project blends military precision, technical clarity, and real-world usefulness. These projects are powered by Django models and managed through the admin panel, ensuring a scalable and maintainable portfolio system." %}
+    </p>
+
+    <div class="card-grid">
+        {% for project in projects %}
+            <div class="card project-card">
+                <h3 class="project-title">{{ project.title }}</h3>
+
+                {% if project.image %}
+                    <img src="{{ project.image.url }}"
+                         alt="{{ project.title }}"
+                         class="project-image">
+                {% endif %}
+
+                <p class="project-description">
+                    {{ project.description }}
+                </p>
+
+                {% if project.link %}
+                    <p>
+                        <a href="{{ project.link }}" target="_blank" class="project-link">
+                            {% trans "View Project" %}
+                        </a>
+                    </p>
+                {% endif %}
+
+                <p class="project-date">
+                    {% if project.created_at %}
+                        {% trans "Created:" %}
+                        {% localize on %}
+                            {{ project.created_at|date:"d \\de F \\de Y" }}
+                        {% endlocalize %}
+                    {% endif %}
+                </p>
+            </div>
+        {% empty %}
+            <p class="mt-4">
+                {% trans "No projects have been added yet. Use the Django admin to create your first SGnG project entry." %}
+            </p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

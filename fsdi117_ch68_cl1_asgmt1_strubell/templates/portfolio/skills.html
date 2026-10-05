@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+{% block content %}
+<section class="section">
+    <h2>{% trans "Skills" %}</h2>
+    <p>
+        {% trans "Skills are modeled and managed via Django, showcasing both technical and soft skills that support SGnG and Strubell Publishing LLC." %}
+    </p>
+
+    <div class="card-grid">
+        {% for skill in skills %}
+            <div class="card">
+                <h3>{{ skill.name }}</h3>
+                <p>{% trans "Level:" %} {{ skill.level }}</p>
+                {% if skill.description %}
+                    <p>{{ skill.description }}</p>
+                {% endif %}
+            </div>
+        {% empty %}
+            <p>{% trans "No skills have been added yet. Use the Django admin to define your core skill set." %}</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Spanish (US) translations for SGnG Portfolio
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SGnG Portfolio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 11:51-0400\n"
+"PO-Revision-Date: 2026-10-04 12:00-0400\n"
+"Last-Translator: Tim Strubell\n"
+"Language-Team: Spanish-US\n"
+"Language: es_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\portfolio\forms.py:7
+msgid "First Name"
+msgstr "Nombre"
+
+#: .\portfolio\forms.py:12
+msgid "Last Name"
+msgstr "Apellido"
+
+#: .\portfolio\forms.py:16
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: .\portfolio\forms.py:20
+msgid "Confirm Email"
+msgstr "Confirmar correo electrónico"
+
+#: .\portfolio\forms.py:25 .\templates\portfolio\contact.html:47
+msgid "Subject"
+msgstr "Asunto"
+
+#: .\portfolio\forms.py:29
+msgid "Comments"
+msgstr "Comentarios"
+
+#: .\portfolio\forms.py:34
+msgid "Enter your message (max 600 characters)"
+msgstr "Ingrese su mensaje (máximo 600 caracteres)"
+
+#: .\portfolio\forms.py:45
+msgid "Email addresses must match."
+msgstr "Las direcciones de correo deben coincidir."
+
+#: .\portfolio\models.py:10
+msgid "Name"
+msgstr "Nombre"
+
+#: .\portfolio\models.py:11
+msgid "Level"
+msgstr "Nivel"
+
+#: .\portfolio\models.py:12 .\portfolio\models.py:36
+msgid "Category"
+msgstr "Categoría"
+
+#: .\portfolio\models.py:13 .\portfolio\models.py:35
+msgid "Description"
+msgstr "Descripción"
+
+#: .\portfolio\models.py:17
+msgid "Proficiency"
+msgstr "Dominio"
+
+#: .\portfolio\models.py:22
+msgid "Skill"
+msgstr "Habilidad"
+
+#: .\portfolio\models.py:23 .\portfolio\models.py:39
+#: .\templates\portfolio\base.html:59 .\templates\portfolio\base.html:87
+#: .\templates\portfolio\skills.html:8
+msgid "Skills"
+msgstr "Habilidades"
+
+#: .\portfolio\models.py:33
+msgid "Title"
+msgstr "Título"
+
+#: .\portfolio\models.py:34
+msgid "Slug"
+msgstr "Identificador"
+
+#: .\portfolio\models.py:37
+msgid "Link"
+msgstr "Enlace"
+
+#: .\portfolio\models.py:38
+msgid "Image"
+msgstr "Imagen"
+
+#: .\portfolio\models.py:40
+msgid "Created At"
+msgstr "Creado el"
+
+#: .\portfolio\models.py:44
+msgid "Project"
+msgstr "Proyecto"
+
+#: .\portfolio\models.py:45 .\templates\portfolio\base.html:56
+#: .\templates\portfolio\base.html:86 .\templates\portfolio\projects.html:8
+msgid "Projects"
+msgstr "Proyectos"
+
+#: .\templates\portfolio\about_me.html:10
+msgid "Tim Strubell avatar"
+msgstr "Avatar de Tim Strubell"
+
+#: .\templates\portfolio\about_me.html:13 .\templates\portfolio\base.html:50
+msgid "About Me"
+msgstr "Sobre mí"
+
+#: .\templates\portfolio\about_me.html:15
+msgid ""
+"I'm Tim Strubell—husband, father, veteran, and developer. After 23 years in "
+"the Army and Special Operations, I transitioned into software development "
+"with the same mindset that carried me through complex missions: plan "
+"clearly, execute precisely, and always improve."
+msgstr ""
+"Soy Tim Strubell—esposo, padre, veterano y desarrollador. Después de 23 años "
+"en el Ejército y Operaciones Especiales, hice la transición al desarrollo de "
+"software con la misma mentalidad que me acompañó en mis misiones: planificar "
+"con claridad, ejecutar con precisión y mejorar siempre."
+
+#: .\templates\portfolio\about_me.html:18
+msgid ""
+"Today, I'm a Full Stack Development Immersive student at San Diego Global "
+"Knowledge University, focused on building clean, responsive web "
+"applications. I care deeply about unified technical structure, professional "
+"documentation, and systems that make sense to the people who use them."
+msgstr ""
+"Actualmente soy estudiante del programa Full Stack Development Immersive en "
+"San Diego Global Knowledge University, enfocado en crear aplicaciones web "
+"limpias y responsivas. Me importa profundamente la estructura técnica "
+"unificada, la documentación profesional y los sistemas que tienen sentido "
+"para quienes los usan."
+
+#: .\templates\portfolio\about_me.html:21
+msgid ""
+"Strubell Goods & Gear and Strubell Publishing LLC are extensions of that "
+"philosophy—where high-quality leather aesthetics, detailed Word/Excel plans, "
+"and modern web development come together under one disciplined brand."
+msgstr ""
+"Strubell Goods & Gear y Strubell Publishing LLC son extensiones de esa "
+"filosofía—donde la estética de cuero de alta calidad, los planes detallados "
+"en Word/Excel y el desarrollo web moderno se unen bajo una marca disciplinada."
+
+#: .\templates\portfolio\base.html:28
+msgid "Strubell"
+msgstr "Strubell"
+
+#: .\templates\portfolio\base.html:28
+msgid "Goods & Gear"
+msgstr "Goods & Gear"
+
+#: .\templates\portfolio\base.html:47 .\templates\portfolio\base.html:85
+msgid "Home"
+msgstr "Inicio"
+
+#: .\templates\portfolio\base.html:53 .\templates\portfolio\experience.html:8
+msgid "Experience"
+msgstr "Experiencia"
+
+#: .\templates\portfolio\base.html:62 .\templates\portfolio\base.html:88
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\templates\portfolio\base.html:67 .\templates\portfolio\base.html:102
+#: .\templates\portfolio\base.html:109
+msgid "Dark Mode"
+msgstr "Modo oscuro"
+
+#: .\templates\portfolio\base.html:81
+msgid "Strubell Goods & Gear (SGnG), a DBA of Strubell Publishing LLC"
+msgstr "Strubell Goods & Gear (SGnG), una DBA de Strubell Publishing LLC"
+
+#: .\templates\portfolio\base.html:102 .\templates\portfolio\base.html:114
+msgid "Light Mode"
+msgstr "Modo claro"
+
+#: .\templates\portfolio\contact.html:6
+msgid "Contact | Strubell Goods & Gear · Strubell Publishing LLC"
+msgstr "Contacto | Strubell Goods & Gear · Strubell Publishing LLC"
+
+#: .\templates\portfolio\contact.html:10
+msgid "Contact Strubell Goods & Gear"
+msgstr "Contactar a Strubell Goods & Gear"
+
+#: .\templates\portfolio\contact.html:12
+msgid ""
+"Reach out to Strubell Goods & Gear for any inquiries on projects, "
+"collaborations, or mission-focused engagements."
+msgstr ""
+"Comuníquese con Strubell Goods & Gear para consultas sobre proyectos, "
+"colaboraciones o iniciativas enfocadas en la misión."
+
+#: .\templates\portfolio\contact.html:17
+msgid ""
+"Your message has been sent successfully. Please check your Gmail inbox to "
+"confirm delivery. I'll review it and respond as soon as possible."
+msgstr ""
+"Su mensaje ha sido enviado exitosamente. Por favor revise su bandeja de "
+"entrada de Gmail para confirmar la entrega. Lo revisaré y responderé lo "
+"antes posible."
+
+#: .\templates\portfolio\contact.html:26
+msgid "First Name (Required)"
+msgstr "Nombre (Requerido)"
+
+#: .\templates\portfolio\contact.html:30
+msgid "Last Name (Required)"
+msgstr "Apellido (Requerido)"
+
+#: .\templates\portfolio\contact.html:37
+msgid "Email (Required)"
+msgstr "Correo electrónico (Requerido)"
+
+#: .\templates\portfolio\contact.html:41
+msgid "Confirm Email (Required)"
+msgstr "Confirmar correo electrónico (Requerido)"
+
+#: .\templates\portfolio\contact.html:52
+msgid "Comments (Required)"
+msgstr "Comentarios (Requerido)"
+
+#: .\templates\portfolio\contact.html:55
+msgid "of 600 max characters"
+msgstr "de 600 caracteres máximo"
+
+#: .\templates\portfolio\contact.html:64
+msgid "600 characters remaining"
+msgstr "600 caracteres restantes"
+
+#: .\templates\portfolio\contact.html:67
+msgid "Submit"
+msgstr "Enviar"
+
+#: .\templates\portfolio\contact.html:68
+msgid "Reset"
+msgstr "Restablecer"
+
+#: .\templates\portfolio\contact.html:86
+msgid "characters remaining"
+msgstr "caracteres restantes"
+
+#: .\templates\portfolio\experience.html:11
+msgid "Military & Special Operations"
+msgstr "Militar y Operaciones Especiales"
+
+#: .\templates\portfolio\experience.html:13
+msgid ""
+"Over two decades of service in the Army and Special Operations shaped my "
+"ability to lead, adapt, and deliver under pressure. Mission planning, risk "
+"assessment, and disciplined execution are now core to how I approach "
+"software projects."
+msgstr ""
+"Más de dos décadas de servicio en el Ejército y Operaciones Especiales "
+"formaron mi capacidad de liderar, adaptarme y rendir bajo presión. La "
+"planificación de misiones, la evaluación de riesgos y la ejecución "
+"disciplinada son ahora fundamentales en mi enfoque hacia los proyectos de "
+"software."
+
+#: .\templates\portfolio\experience.html:17
+msgid "Full Stack Development Immersive · SDGKU"
+msgstr "Full Stack Development Immersive · SDGKU"
+
+#: .\templates\portfolio\experience.html:19
+msgid ""
+"Currently completing FSDI courses, including portfolio development with "
+"Django, Agile architecture, and project management. I focus on building "
+"portfolios that are not just visually appealing, but structurally sound and "
+"easy to maintain."
+msgstr ""
+"Actualmente completando cursos FSDI, incluyendo desarrollo de portafolios "
+"con Django, arquitectura ágil y gestión de proyectos. Me enfoco en crear "
+"portafolios que no solo sean visualmente atractivos, sino estructuralmente "
+"sólidos y fáciles de mantener."
+
+#: .\templates\portfolio\experience.html:23
+msgid "Strubell Publishing LLC · SGnG"
+msgstr "Strubell Publishing LLC · SGnG"
+
+#: .\templates\portfolio\experience.html:25
+msgid ""
+"From shed construction plans in Word and Excel to SGnG‑branded web "
+"experiences, I design artifacts that are ready for real‑world use—clear, "
+"documented, and aligned with professional standards."
+msgstr ""
+"Desde planos de construcción de cobertizos en Word y Excel hasta "
+"experiencias web con la marca SGnG, diseño artefactos listos para el uso "
+"real—claros, documentados y alineados con estándares profesionales."
+
+#: .\templates\portfolio\home.html:9
+msgid "Tim Strubell"
+msgstr "Tim Strubell"
+
+#: .\templates\portfolio\home.html:11
+msgid "Developer · Veteran · Builder of Better Systems"
+msgstr "Desarrollador · Veterano · Constructor de mejores sistemas"
+
+#: .\templates\portfolio\home.html:14
+msgid ""
+"Strubell Goods & Gear (SGnG), a DBA of Strubell Publishing LLC, is my way of "
+"turning discipline, craftsmanship, and code into tangible impact—from "
+"leather aesthetics to full-stack solutions."
+msgstr ""
+"Strubell Goods & Gear (SGnG), una DBA de Strubell Publishing LLC, es mi "
+"manera de convertir la disciplina, la artesanía y el código en impacto "
+"tangible—desde la estética del cuero hasta soluciones full-stack."
+
+#: .\templates\portfolio\home.html:17
+msgid "View Portfolio"
+msgstr "Ver portafolio"
+
+#: .\templates\portfolio\home.html:22
+msgid "What Drives Me"
+msgstr "Qué me impulsa"
+
+#: .\templates\portfolio\home.html:23
+msgid "Military Precision:"
+msgstr "Precisión militar:"
+
+#: .\templates\portfolio\home.html:24
+msgid ""
+"23 years in Army and Special Operations forged my attention to detail, "
+"resilience, and mission-first mindset."
+msgstr ""
+"23 años en el Ejército y Operaciones Especiales forjaron mi atención al "
+"detalle, resiliencia y mentalidad de misión primero."
+
+#: .\templates\portfolio\home.html:26
+msgid "Technical Growth:"
+msgstr "Crecimiento técnico:"
+
+#: .\templates\portfolio\home.html:27
+msgid ""
+"Currently in the Full Stack Development Immersive at SDGKU, building modern, "
+"responsive web experiences."
+msgstr ""
+"Actualmente en el programa Full Stack Development Immersive en SDGKU, "
+"creando experiencias web modernas y responsivas."
+
+#: .\templates\portfolio\home.html:29
+msgid "SGnG Brand:"
+msgstr "Marca SGnG:"
+
+#: .\templates\portfolio\home.html:30
+msgid ""
+"High-quality leather aesthetics, unified systems, and professional "
+"documentation—everything built to be clear, durable, and dependable."
+msgstr ""
+"Estética de cuero de alta calidad, sistemas unificados y documentación "
+"profesional—todo construido para ser claro, duradero y confiable."
+
+#: .\templates\portfolio\home.html:37
+msgid "Strubell Goods & Gear · Strubell Publishing LLC"
+msgstr "Strubell Goods & Gear · Strubell Publishing LLC"
+
+#: .\templates\portfolio\home.html:39
+msgid ""
+"SGnG is the product arm of Strubell Publishing LLC, blending physical "
+"craftsmanship with digital architecture. Whether it's a shed plan in Word "
+"and Excel or a Django-powered portfolio, the goal is the same: build systems "
+"that are understandable, maintainable, and ready for real-world use."
+msgstr ""
+"SGnG es la división de productos de Strubell Publishing LLC, combinando la "
+"artesanía física con la arquitectura digital. Ya sea un plan de construcción "
+"en Word y Excel o un portafolio desarrollado con Django, el objetivo es el "
+"mismo: crear sistemas que sean comprensibles, mantenibles y listos para el "
+"uso en el mundo real."
+
+#: .\templates\portfolio\projects.html:10
+msgid ""
+"Every SGnG project blends military precision, technical clarity, and real-"
+"world usefulness. These projects are powered by Django models and managed "
+"through the admin panel, ensuring a scalable and maintainable portfolio "
+"system."
+msgstr ""
+"Cada proyecto SGnG combina precisión militar, claridad técnica y utilidad "
+"real. Estos proyectos están impulsados por modelos de Django y gestionados "
+"a través del panel de administración, garantizando un sistema de portafolio "
+"escalable y mantenible."
+
+#: .\templates\portfolio\projects.html:31
+msgid "View Project"
+msgstr "Ver proyecto"
+
+#: .\templates\portfolio\projects.html:38
+msgid "Created:"
+msgstr "Creado:"
+
+#: .\templates\portfolio\projects.html:47
+msgid ""
+"No projects have been added yet. Use the Django admin to create your first "
+"SGnG project entry."
+msgstr ""
+"No se han agregado proyectos aún. Use el panel de administración de Django "
+"para crear su primer proyecto SGnG."
+
+#: .\templates\portfolio\skills.html:10
+msgid ""
+"Skills are modeled and managed via Django, showcasing both technical and "
+"soft skills that support SGnG and Strubell Publishing LLC."
+msgstr ""
+"Las habilidades se modelan y gestionan mediante Django, mostrando tanto "
+"habilidades técnicas como blandas que respaldan a SGnG y Strubell Publishing LLC."
+
+#: .\templates\portfolio\skills.html:17
+msgid "Level:"
+msgstr "Nivel:"
+
+#: .\templates\portfolio\skills.html:23
+msgid ""
+"No skills have been added yet. Use the Django admin to define your core "
+"skill set."
+msgstr ""
+"No se han agregado habilidades aún. Use el panel de administración de Django "
+"para definir su conjunto principal de habilidades."

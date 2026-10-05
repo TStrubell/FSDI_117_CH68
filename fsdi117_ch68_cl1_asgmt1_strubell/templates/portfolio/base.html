@@ -1,0 +1,144 @@
+{% load static %}
+{% load i18n %}
+{% load l10n%}
+{% load tz %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Strubell Goods & Gear | {{ title|default:"Portfolio" }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Fade animation when language changes */
+        body.sgng-fade {
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        body.sgng-fade.sgng-fade-in {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="light-mode sgng-fade sgng-fade-in">
+<div class="site-wrapper">
+
+<header class="navbar">
+    <div class="navbar-brand sgng-title">
+        {% trans "Strubell" %} <span>{% trans "Goods & Gear" %}</span>
+    </div>
+
+    <ul class="navbar-nav">
+        <!-- Language switcher with flags -->
+        <li class="nav-item">
+            <form id="sgng-lang-form" action="{% url 'set_language' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button type="submit" name="language" value="en" class="btn btn-sm sgng-lang-btn">
+                    🇺🇸 EN
+                </button>
+                <button type="submit" name="language" value="es" class="btn btn-sm sgng-lang-btn">
+                    🇪🇸 ES
+                </button>
+            </form>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">{% trans "Home" %}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">{% trans "About Me" %}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/experience/' %}active{% endif %}" href="{% url 'experience' %}">{% trans "Experience" %}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/projects/' %}active{% endif %}" href="{% url 'projects' %}">{% trans "Projects" %}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/skills/' %}active{% endif %}" href="{% url 'skills' %}">{% trans "Skills" %}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+        </li>
+
+        <li class="nav-item">
+            <button id="sgng-theme-toggle" class="btn btn-sm sgng-theme-btn">
+                🌙 {% trans "Dark Mode" %}
+            </button>
+        </li>
+    </ul>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="sgng-footer py-3 mt-5">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="sgng-footer-brand">
+            <span class="fw-bold">
+                {% trans "Strubell Goods & Gear (SGnG), a DBA of Strubell Publishing LLC" %}
+            </span>
+        </div>
+        <nav class="sgng-footer-nav">
+            <a href="{% url 'home' %}">{% trans "Home" %}</a> ·
+            <a href="{% url 'projects' %}">{% trans "Projects" %}</a> ·
+            <a href="{% url 'skills' %}">{% trans "Skills" %}</a> ·
+            <a href="{% url 'contact' %}">{% trans "Contact" %}</a>
+        </nav>
+    </div>
+</footer>
+
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("sgng-theme-toggle");
+    const savedTheme = localStorage.getItem("sgng-theme") || "light-mode";
+    document.body.classList.add(savedTheme);
+    toggleBtn.textContent = savedTheme === "dark-mode" ? "☀️ {% trans 'Light Mode' %}" : "🌙 {% trans 'Dark Mode' %}";
+
+    toggleBtn.addEventListener("click", function () {
+        if (document.body.classList.contains("dark-mode")) {
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+            localStorage.setItem("sgng-theme", "light-mode");
+            toggleBtn.textContent = "🌙 {% trans 'Dark Mode' %}";
+        } else {
+            document.body.classList.remove("light-mode");
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("sgng-theme", "dark-mode");
+            toggleBtn.textContent = "☀️ {% trans 'Light Mode' %}";
+        }
+    });
+
+    // Fade animation on language change
+    document.body.classList.remove("sgng-fade-in");
+    setTimeout(() => {
+        document.body.classList.add("sgng-fade-in");
+    }, 50);
+
+    // Auto-detect browser language on first visit
+    const langCookie = document.cookie.match(/django_language=([^;]+)/);
+    if (!langCookie) {
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        const targetLang = browserLang.startsWith('es') ? 'es' : 'en';
+        const form = document.getElementById("sgng-lang-form");
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "language";
+        input.value = targetLang;
+        form.appendChild(input);
+        form.submit();
+    }
+});
+</script>
+
+</body>
+</html>

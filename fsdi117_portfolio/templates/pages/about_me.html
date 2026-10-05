@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Tim Strubell{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row">
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'img/avatar_tim_strubell.png' %}" 
+                 alt="Tim Strubell" 
+                 class="hero-avatar">
+        </div>
+        <div class="col-md-8">
+            <h1 class="section-heading">About Me</h1>
+            <p>
+                I’m Tim Strubell, a medically retired U.S. Army veteran with 23 years of service, including 
+                18 years in Special Operations. My career taught me discipline, readiness, and how to lead 
+                when the stakes are high.
+            </p>
+            <p>
+                After retiring, I founded Strubell Publishing LLC and expanded into Strubell Goods & Gear (SGnG), 
+                a brand focused on rugged, purpose‑built equipment and systems inspired by real‑world experience.
+            </p>
+            <p>
+                I’m currently a Full Stack Development Immersive student at San Diego Global Knowledge University, 
+                working with HTML, CSS, JavaScript, Python, and Django to build clean, unified web systems. 
+                I care deeply about structure—whether in code, documentation, or physical workshop plans.
+            </p>
+            <p>
+                My goal is simple: build things that are clear, durable, and genuinely useful—whether that’s a 
+                portfolio, a workshop, or a gear concept under the SGnG banner.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

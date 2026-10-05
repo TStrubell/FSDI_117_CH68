@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Strubell Goods & Gear | Home{% endblock %}
+
+{% block content %}
+
+<!-- HERO + PARALLAX SECTION -->
+<section class="hero-parallax">
+    <div class="hero-overlay">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="{% static 'img/avatar_tim_strubell.png' %}" 
+                         alt="Tim Strubell" 
+                         class="hero-avatar">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="hero-title">
+                        Discipline, Craftsmanship, and Code.
+                    </h1>
+                    <p class="hero-subtitle">
+                        I spent 23 years in the U.S. Army—18 in Special Operations—learning discipline, readiness, 
+                        and how to lead under pressure. Today, I bring that same mindset to software development, 
+                        Strubell Goods & Gear (SGnG), and Strubell Publishing LLC—building systems, tools, and gear 
+                        that people can trust.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="{% url 'projects' %}" class="btn btn-primary me-2">Explore My Projects</a>
+                        <a href="{% url 'contact' %}" class="btn btn-outline-light">Work With Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECONDARY SECTION: BRAND & MISSION -->
+<section class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="section-heading">Strubell Goods & Gear (SGnG)</h2>
+            <p class="section-intro">
+                SGnG is my expression of readiness and craftsmanship—gear and systems inspired by real-world 
+                experience, built for people who take their work seriously.
+            </p>
+            <p>
+                Every decision is guided by four pillars: <strong>Readiness</strong>, <strong>Reliability</strong>, 
+                <strong>Craftsmanship</strong>, and <strong>Purpose</strong>. Whether it’s a leather concept, a 
+                workshop layout, or a Django portfolio, the goal is the same: build it right, build it to last.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2 class="section-heading">Developer & Builder</h2>
+            <p>
+                I’m a Full Stack Development Immersive student at San Diego Global Knowledge University, working 
+                with HTML, CSS, JavaScript, Python, and Django. I care about unified systems—clean structure, 
+                clear documentation, and responsive design that feels intentional.
+            </p>
+            <p>
+                I also design and plan physical spaces, like my 16×20 workshop with an 8×16 loft, where woodworking, 
+                leathercraft, and engineering meet. Code and craft aren’t separate worlds for me—they’re different 
+                tools for the same mission.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
