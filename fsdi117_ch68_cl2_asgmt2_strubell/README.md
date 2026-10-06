@@ -1,33 +1,35 @@
-# FSDI-117 – Assignment 2  
+# FSDI-117 – ASSIGNMENT 2  
 
 ---
 
-## User Story Creation and Effort Estimation  
-- **Student:** Tim Strubell  
-- **Course:** FSDI 117 – Agile Architecture and Software Project Management  
-- **Cohort:** 68  
-- **Class:** 2  
-- **Assignment:** #2 – User Story and Effort Estimation (SGnG)  
-- **Folder Name:** `fsdi117_ch68_cl2_asgmt2_strubell`  
-- **GitHub Repo:** `https://github.com/TStrubell/FSDI_117_Ch68.git`  
+## USER STORY CREATION AND EFFORT ESTIMATION
+
+- **STUDENT:** Tim Strubell  
+- **COURSE #:** FSDI 117 – Agile Architecture and Software Project Management  
+- **COHORT #:** 68  
+- **CLASS #:** 2  
+- **ASSIGNMENT #:** #2 – User Story and Effort Estimation (SGnG)  
+- **FOLDER NAME:** `fsdi117_ch68_cl2_asgmt2_strubell`  
+- **GITHUB REPO LINK:** `https://github.com/TStrubell/FSDI_117_Ch68.git`  
 
 ---
 
-## Overview
+## OVERVIEW
+
 This repository contains my work for **FSDI 117 – Agile Architecture and Software Project Management, Cohort 68, Class 2, Assignment 2: User Story and Effort Estimation** for the **Strubell Goods & Gear (SGnG)** portfolio project.
 
 The assignment focuses on defining Agile user stories and acceptance criteria for key SGnG features, then applying **Planning Poker** with a **Fibonacci-based story point deck** to estimate relative effort and complexity for each story.
 
 ---
 
-## Files
+## FILES
 
 - `user_stories.md` – User stories, acceptance criteria, and tasks.
 - `estimation_session.md` – Effort estimation using Planning Poker and story points.
 
 ---
 
-## Methodology
+## METHODOLOGY
 
 1. I identified core features of my portfolio (viewing projects, contacting me, and browsing skills).
 2. I wrote user stories using the standard format:
@@ -43,7 +45,7 @@ structured estimation and communication.
 
 --- 
 
-### 3. SGnG User Stories & Acceptance Criteria
+### 3. SGnG USER STORIES AND ACCEPTANCE CRITERIA
 
 The assignment defines five core user stories for the SGnG Django portfolio:
 
@@ -90,7 +92,7 @@ The assignment defines five core user stories for the SGnG Django portfolio:
 
 ---
 
-### 4. Planning Poker Deck & Estimation Approach
+### 4. PLANNING POKER DECK AND ESTIMATION APPROACH
 
 The Planning Poker deck uses the **Fibonacci sequence**:
 
@@ -113,7 +115,7 @@ A simulated team voting round was performed for the **Projects Page** story, res
 
 ---
 
-### 5. Story Point Estimates
+### 5. STORY POINT ESTIMATES
 
 Final story point assignments (Planning Poker):
 
@@ -127,7 +129,9 @@ Final story point assignments (Planning Poker):
 
 These estimates represent **relative effort**, not exact hours, and follow Agile best practices for story point estimation.
 
-### 6. How Planning Poker Applies to SGnG
+---
+
+### 6. HOW PLANNING POKER APPLIES TO SGNG
 
 Planning Poker supports the SGnG project by:
 
@@ -144,10 +148,14 @@ Planning Poker supports the SGnG project by:
 
 Overall, Planning Poker provides a structured, collaborative way to communicate scope and complexity and to plan development tasks for the SGnG portfolio.
 
-### 7. Backend / Logic
+---
+
+### 7. BACKEND / LOGIC
 
 For Assignment 2, **no backend code screenshots** are required. The focus is on Agile planning artifacts (user stories, acceptance criteria, and estimation).
 
-### 8. AI Disclosure
+---
+
+### 8. AI DISCLOSURE
 
 I used **Microsoft Copilot** to help organize and draft the written content for this assignment. Copilot did **not** generate any source code. All ideas, interpretations, and final responses represent my own understanding and were reviewed and finalized by me, **Tim Strubell**, in accordance with SDGKU’s AI-assisted learning guidelines.
